@@ -1,0 +1,6 @@
+version=3
+opts=uversionmangle=s/(rc|a|b|c)/~$1/,\
+dversionmangle=s/\+dfsg\d*$//,\
+repacksuffix=+dfsg1,\
+filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/werkzeug-$1\.tar\.gz/ \
+https://github.com/pallets/werkzeug/tags .*/v?(\d\S*)\.tar\.gz

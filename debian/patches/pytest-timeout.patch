@@ -1,0 +1,16 @@
+Description: Don't mark warning as error in pytest during build
+Author: Ondřej Nový (onovy@debian.org)
+
+We don't have python-pytest-timeout (for Python 2) so we need to ignore
+warning about PytestUnknownMarkWarning.
+
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -9,7 +9,6 @@
+ testpaths = tests
+ norecursedirs = tests/hypothesis
+ filterwarnings =
+-    error
+     ignore::requests.packages.urllib3.exceptions.InsecureRequestWarning
+     ; warning about collections.abc fixed in watchdog master
+     ignore::DeprecationWarning:watchdog.utils.bricks:175

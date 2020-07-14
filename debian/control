@@ -1,0 +1,75 @@
+Source: python-werkzeug
+Section: python
+Priority: optional
+Maintainer: Python Modules Packaging Team <python-modules-team@lists.alioth.debian.org>
+Uploaders:
+ Ondřej Nový <onovy@debian.org>,
+Standards-Version: 4.5.0
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ memcached,
+ python3-doc,
+ python3-pylibmc,
+ python3-redis,
+ python3-all,
+ python3-lxml,
+ python3-nose,
+ python3-pallets-sphinx-themes,
+ python3-pytest,
+ python3-pytest-timeout,
+ python3-requests,
+ python3-setuptools,
+ python3-simplejson,
+ python3-sphinx,
+ python3-sphinx-issues,
+ redis-server,
+Homepage: http://werkzeug.pocoo.org/
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-werkzeug.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-werkzeug
+Testsuite: autopkgtest-pkg-python
+Rules-Requires-Root: no
+
+Package: python3-werkzeug
+Architecture: all
+Depends:
+ libjs-jquery,
+ ${misc:Depends},
+ ${python3:Depends},
+Recommends:
+ python3-openssl,
+ python3-pyinotify,
+Suggests:
+ ipython3,
+ python-werkzeug-doc,
+ python3-lxml,
+ python3-pkg-resources,
+ python3-watchdog,
+Description: collection of utilities for WSGI applications (Python 3.x)
+ The Web Server Gateway Interface (WSGI) is a standard interface between web
+ server software and web applications written in Python.
+ .
+ Werkzeug is a lightweight library for interfacing with WSGI. It features
+ request and response objects, an interactive debugging system and a powerful
+ URI dispatcher. Combine with your choice of third party libraries and
+ middleware to easily create a custom application framework.
+ .
+ This package contains the Python 3.x module.
+
+Package: python-werkzeug-doc
+Section: doc
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${sphinxdoc:Depends},
+Replaces:
+ python-werkzeug (<< 0.9.3+dfsg-2),
+Breaks:
+ python-werkzeug (<< 0.9.3+dfsg-2),
+Description: documentation for the werkzeug Python library (docs)
+ Werkzeug is a lightweight library for interfacing with WSGI. It features
+ request and response objects, an interactive debugging system and a powerful
+ URI dispatcher. Combine with your choice of third party libraries and
+ middleware to easily create a custom application framework.
+ .
+ This package provides the Sphinx generated documentation for Werkzeug.

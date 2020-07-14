@@ -1,0 +1,25 @@
+From fadbc1bd539a76edc4e576d00d218d1b4793a933 Mon Sep 17 00:00:00 2001
+From: SVN-Git Migration <python-modules-team@lists.alioth.debian.org>
+Date: Thu, 8 Oct 2015 13:25:38 -0700
+Subject: drop_ubuntu_font
+
+Patch-Name: drop_ubuntu_font.patch
+---
+ werkzeug/debug/shared/style.css | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/werkzeug/debug/shared/style.css b/werkzeug/debug/shared/style.css
+index 2f4c5be..4e9fbe2 100644
+--- a/src/werkzeug/debug/shared/style.css
++++ b/src/werkzeug/debug/shared/style.css
+@@ -1,9 +1,7 @@
+ @font-face {
+-  font-family: 'Ubuntu';
++  font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana';
+   font-style: normal;
+   font-weight: normal;
+-  src: local('Ubuntu'), local('Ubuntu-Regular'),
+-    url('?__debugger__=yes&cmd=resource&f=ubuntu.ttf') format('truetype');
+ }
+ 
+ body, input  { font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva',
