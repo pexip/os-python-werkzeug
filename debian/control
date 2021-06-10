@@ -32,7 +32,6 @@ XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
 Package: python3-werkzeug
 Architecture: all
 Depends:
- libjs-jquery,
  ${misc:Depends},
  ${python3:Depends},
 Recommends:
